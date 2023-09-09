@@ -1,25 +1,49 @@
 package main
 
-/*
-0. Declaration
-1. Different types
-3. Creating instances, instantiation
-4. Zero values
-5. Consecutive fields with same type
-6. User defined type. Structs are the only way to create concrete user-defined types in Golang.
-7. Struct Visibility
-8. Fields Visibility
-9. Embedding
-10. Recursive (almost)
-11. Anonymous/unnamed structs
-12. Structural comparison
-13. methods or pointer and value receivers
-14. Tagging
-15. Implicit dereferencing
-16. Assignment
-*/
+import (
+	"fmt"
 
-
+	"./zoo"
+)
 
 func main() {
+	animals_in_zoo()
+}
+
+// func ticket_buy() {
+// 	tickets := []zoo.Ticket{
+// 		{
+// 			Type:  "Simple",
+// 			Price: 25,
+// 		},
+// 		{
+// 			Type:  "Lux",
+// 			Price: 50,
+// 		},
+// 	}
+// }
+
+func animals_in_zoo() {
+	animals := []zoo.Animal{
+		{
+			Name:      "Zibra",
+			Continent: "Afrika",
+			Behaivor:  "calm",
+			Size:      "middle",
+			Age:       25,
+			Famosable: true,
+		},
+		{
+			Name:      "Lion",
+			Continent: "Afrika",
+			Behaivor:  "agressive",
+			Size:      "middle",
+			Age:       25,
+			Famosable: false,
+		},
+	}
+
+	for _, animals_in_zoo := range animals {
+		fmt.Printf("Name: %s %s, Age: %d\n", animals_in_zoo.Name, animals_in_zoo.Continent, animals_in_zoo.Age)
+	}
 }
