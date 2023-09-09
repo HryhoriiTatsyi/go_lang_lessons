@@ -1,8 +1,8 @@
 package zoo
 
 type Ticket struct {
-	Type  string
-	Price int
+	Type, Desc string
+	Price      int
 }
 
 type Animal struct {
